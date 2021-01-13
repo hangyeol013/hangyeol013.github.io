@@ -1,141 +1,130 @@
-# =======================================#
-# -----------DUMBARTON THEME-------------#
-# ----------------By: Tyler Butler-------#
-#-----------------https://tbutler.org----#
-#========================================#
+# -----------------------------------------------------------------------------
+#  User configuration
+# -----------------------------------------------------------------------------
 
-# =======================================#
-# -----------BASE SETTINGS---------------#
-#========================================#
+title:               Aiden
 
-title: Dumbarton 
-email: 
-description: a minimalistic jekyll theme for academics
-baseurl:                                       # the subpath of your site, e.g. /blog
-url: "https://dumbarton.netlify.app/"          # the base hostname & protocol for your site, e.g. http://example.com
-image: /assets/img/dumbarton.png               # used to generate site link preview
-image_alt: A minimalistic jekyll theme for academic    # image description
+# The unique resource location of your page.
+# Set to `https://<username>.github.io` when hosting on GitHub Pages
+url:                 https://isme2n.github.io
 
-# =======================================#
-# -----------SITE SETTINGS---------------#
-#========================================#: 
-author: John Doe 
-profile_image: /assets/img/avatar/cropped.png #/assets/img/avatar/avatar.jpeg 
-occupation: 
-snippet: 
-twitter: tbutler0x90
-github: tcbutler320
-linkedin: tyler-b-a700a1aa
-stackoverflow: 12935605
-website: https://tbutler.org
-codepen: tcbutler320
-email: 
-pgp: 
-ctftime: 
-phonenumber: 
+# Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
+# Set to '/<reponame>' when using the `gh-pages` branch of a repository
+baseurl:             ""
 
-# =======================================#
-# -----------BLOG SETTINGS---------------#
-#========================================#
+# A very short description of your page
+tagline:             가장 게으르기위해 가장 부지런한 개발자
 
-tags:  post jekyll styleguide ipsum
+# A short description of the page, used in the sidebar and as fallback for the meta description tag.
+# Markdown enabled, but don't use more than one paragraph (enforced by `>`)
+description:         >
+  게으르기 때문에 게발자.
+  글쓰는 걸 좋아하고, 디자인과 개발을 좋아한다.
 
-comments: false                                     # Used to enable comments on blog posts
-gitalk_client_id:             
-gitalk_client_secret:    
-gitalk_repo:
-gitalk_owner: 
-gitalk_admin: 
-gitalk_distraction_mode: false
+# This should be the same author as first entry in `_data/authors.yml`
+author:
+  name:              aiden min
+  email:             zoqozqz@gmail.com
 
-# =======================================#
-# -----------THEME SETTINGS--------------#
-#========================================#
+# Fallback image and color
+image:               /assets/img/nap.jpg
+color:               '#4f86aa'
 
-nav-color: "#00334e"                                 # options: light, dark, transparent, primary, custom | Change the color of the navbar
-footer-color: "#00334e"
-color-scheme: "#00334e"                              # options: demo | changes color scheme based on preset values 
-card-color: "#00334e"                                # Used on cards like the home highlights section
-nav-dIcon: "fas fa-caret-down"                       # Change the navbar dropdown (for mobile or small screen sizes) to any fontawesome icon. for a list of icons visit https://fontawesome.com/ 
-animate: true                                        # false or true, uses animate.css to animate certain functions
+# The font used for headings. Expects a string that is a valid CSS font-family value.
+font_heading:        "'Lato', 'Sans-serif'"
 
-# =======================================#
-# -----------HOME PAGE  SETTINGS --------#
-#========================================#
-home_option: education                               # options: education, skills, timeline
+# The text font. Expects a string that is a valid CSS font-family value.
+font:                "'Lato', 'Sans-serif'"
 
-# =======================================#          # These  settings are for demo purposes only, things like 
-# -----------HELP SETTINGS---------------#          #     popup toasts and tooltips designed to help new 
-#========================================#          #     developers as they look into using this theme      
-help_tips: false                                    # options: true, false  | use false to disable these for production mode
+# The string encoding what fonts to fetch from Google Fonts.
+# See: https://qwtel.com/hydejack/docs/configuration/
+google_fonts:        Lato
 
+# If you do not use a Google Fonts, uncomment the line below
+# no_google_fonts:     true
 
-# =======================================#
-# -----------BUILD SETTINGS--------------#
-#========================================#
-theme: 
-markdown: kramdown
+# Set your Google Analytics id to receive `pageview` events.
+# To remove Google Anaylics from your page, remove the line below.
+google_analytics:    UA-92346434-1
 
-kramdown:
-  syntax_highlighter: rouge
+# Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
+disqus_shortname:    isme2n
 
-plugins:
+# This text will appear in the footer of every page. Markdown enabled.
+copyright:           '&copy; 2017. by isme2n'
+
+# Format of the permalinks
+permalink:           pretty
+
+# Pagination configuration (used by the `blog` layout)
+paginate:            8
+paginate_path:       '/page-:num/'
+
+# If you are upgrading form a v5 verison of Hydejack, uncomment the two lines below,
+# so that the location of the feed XML stays the same.
+# feed:
+#   path:              atom.xml
+
+# Set to true when building with the `--lsi` option
+# See: https://jekyllrb.com/docs/variables/#site-variables
+# use_lsi:             true
+
+# Set to `true` if you don't want to show an icon after each link that opens to an external site
+# no_mark_external:    true
+
+# Uncomment this line if third party plugins fail to work with dynimically loaded pages
+# disable_push_state:  true
+
+# Uncomment this line if want to disable the touch drawer on mobile
+# disable_drawer: true
+
+# -----------------------------------------------------------------------------
+#  Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  featured_categories:
+    permalink:       /category/:name/
+    output:          true
+  featured_tags:
+    permalink:       /tag/:name/
+    output:          true
+  projects:
+    permalink:       /projects/:path/
+    output:          true
+
+# -----------------------------------------------------------------------------
+#  Advanced configuration
+# -----------------------------------------------------------------------------
+
+gems:
   - jekyll-feed
-  - jekyll-scholar
-  - jekyll-environment-variables
-sass:
-  sass_dir: _sass
-  style: compressed
-
-
-include:
-  - _posts
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
 
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
+  - README.md
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - package-lock.json
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
 
-# =======================================#
-# -----JEKYLL SCHOLAR SETTINGS-----------#
-#========================================#
-scholar:
-  last_name: Dumbarton
-  style: apa
-  locale: en
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  replace_strings: true
-  join_strings: true
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: 
-  query: "@*"
+kramdown:
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine:       mathjax
+  math_engine_opts:
+    preview:         true
+    preview_as_code: true
 
-# =======================================#
-# ------------CDN SETTINGS---------------#
-#-------------Used to generate icons-----#
-#========================================#
-font_awesome_id: 32a2b2a489                       # Register for free at https://fontawesome.com/ to get your id
+compress_html:
+  comments:          ["<!-- ", " -->"]
+  clippings:         all
+  endings:           all
+  ignore:
+    envs:            [development]
 
-
-# =======================================#        # For more information about these settings, visit https://htmlhead.dev #
-# ------------META TAG SETTINGS----------#
-#========================================#
-google-site-verification:                         #<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
-yandex-verification:                              #<meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
-msvalidate:                                       # meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
-alexaVerifyID:                                    # <meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
-pinterestdomain_verify:                           #<meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
-norton-safeweb:                                   # <meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
-detectphone: yes                                  # yes or no. Disable automatic detection and formatting of possible phone numbers 
-x-dns-prefetch-control: on                        # on or off. Completely opt out of DNS prefetching by setting to "off"
-fbappid:                                          # Facebook OpenGraph 
+sass:
+  style:             compressed

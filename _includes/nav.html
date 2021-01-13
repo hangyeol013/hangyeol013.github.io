@@ -1,24 +1,32 @@
-<nav class="navbar navbar-expand-lg text-white" style="background-color:{{ site.nav-color }};">
-  <a class="navbar-brand text-white" href="/index.html"><h4 style="font-family:Courgette;">{{ site.title }}</h4></a>
-  <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="{{ site.nav-dIcon }}"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        {% for item in site.data.nav.links %}
-              <li class="nav-item">
-                  <a href="{{ item.url }}" class="nav-link text-white">{{ item.title }}</a>
-              </li>
-        {% endfor %}
-    </ul>
-    <ul class="navbar-nav  justify-content-end">
-      <li class="nav-item">
-        {% include social.html %}
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Ask me anything" aria-label="Search">
-      <button class="btn btn-light btn-sm my-2 my-sm-0" type="submit">Search</button>
-    </form> 
-  </div>
-</nav>
+<span class="sr-only">Navigation:</span>
+<ul>
+  {% assign pages = site.pages %}
+
+  {% for document in site.documents %}
+    {% assign pages = pages | push: document %}
+  {% endfor %}
+
+  {% assign subpages = pages | where: "menu", false | sort: "order" %}
+  {% assign pages = pages | where: "menu", true | sort: "order" %}
+  {% assign count = 0%}
+  {% for node in pages %}
+  {% assign count = count | plus: 1 %}
+    <li>
+      <input type="checkbox" id="list-item-{{ count }}"/>
+      <div  class="list-wrapper">
+      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+       {% if node.submenu %}<label class="folder" for="list-item-{{ count }}">▾</label>{% endif %}
+    </div>
+     <ul class="list-body">
+       {% for subnode in subpages %}
+           {% if subnode.category == node.slug %}
+             <li>
+               <a class="sidebar-nav-subitem{% if page.url == subnode.url %} active{% endif %}" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+             </li>
+           {% endif %}
+         {% endfor %}
+     </ul>
+    </li>
+
+  {% endfor %}
+</ul>
