@@ -1,6 +1,6 @@
 ---
 layout: list
-title: Documents
+title: Hangyeol
 slug: doc
 menu: true
 submenu: true
