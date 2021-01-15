@@ -6,4 +6,4 @@ gem "jekyll-feed", "~> 0.9"
 gem "jekyll-sitemap", "~> 1.0"
 gem "jekyll-redirect-from", "~> 0.12"
 gem "classifier-reborn"
-gem "kramdown-parser-gfm"
+gem 'wdm', '>= 0.1.0'
