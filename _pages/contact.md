@@ -1,6 +1,6 @@
 ---
 title: contact
-layout: default
+layout: single
 permalink: /contact/
 author_profile: true
 ---
