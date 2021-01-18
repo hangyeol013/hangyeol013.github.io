@@ -5,7 +5,7 @@ main:
   - title: "Blog"
     url: /blog/
   - title: "CV"
-    url: https://hangyeol013.github.io/_pages/CV.pdf
+    url: _pages/CV.pdf
   - title: "Contact"
     url: /contact/
   - title: "Quick-Start Guide"

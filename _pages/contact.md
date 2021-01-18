@@ -1,6 +1,8 @@
 ---
+title: contact
 layout: default
-title: Contact - About
+permalink: /contact/
+author_profile: true
 ---
 
-email: <a href="mailto:hangyeol013@gmail.com">pearson@changedmy.name</a>
+email: <a href="mailto:hangyeol013@gmail.com">hangyeol013@gmail.com</a>
