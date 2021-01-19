@@ -1,9 +1,10 @@
 ---
 title:  "Second post"
-search: false
-categories: 
+search: true
+categories:
   - about
 last_modified_at: 2021-01-18T08:06:00-05:00
+comments: true
 ---
 
 This post should not appear in the search index because it has the following YAML Front Matter:
