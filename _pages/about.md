@@ -3,6 +3,7 @@ title: "About Hangyeol"
 layout: single
 permalink: /about/
 author_profile: true
+comments: false
 ---
 
 Hello, my name is David.
