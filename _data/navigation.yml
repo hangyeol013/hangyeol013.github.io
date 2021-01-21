@@ -10,10 +10,3 @@ main:
     url: _pages/CV.pdf
   - title: "Contact"
     url: /contact/
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
