@@ -12,20 +12,20 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Beyond the universe"
 title_separator          : "|"
-subtitle                 : "Version 1.0"
-name                     : "David"
+subtitle                 : ""
+name                     : "Hangyeol Kang"
 description              : "An amazing website."
 url                      : "https://hangyeol013.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/face.png"
-logo                     : "/assets/images/logo_white.png"
+logo                     : "/assets/images/logo_transparent.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -93,15 +93,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "David"
+  name             : "Hangyeol Kang"
   avatar           : "/assets/images/face.png"
   bio              : "I am an **amazing** person."
   location         : "Seoul, South Korea"
   email            : hangyeol013@gmail.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+    - # label: "Email"
+      # icon: "fas fa-fw fa-envelope-square"
+      # url: "hangyeol013@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/hangyeol013"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"

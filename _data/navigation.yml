@@ -6,6 +6,8 @@ main:
     url: /blog/
   - title: "Projects"
     url: /project/
+  - title: "Articles"
+    url: /article/
   - title: "CV"
     url: _pages/CV.pdf
   - title: "Contact"
