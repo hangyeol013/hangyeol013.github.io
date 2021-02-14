@@ -1,12 +1,12 @@
 ---
 layout: splash
 permalink: /article/
-title: "Media and Outreach "
+title: "Articles"
 header:
   overlay_color: "#5e616c"
-  overlay_image: "/assets/images/eso0934a.jpg"
-  overlay_filter: .4
-  caption: "[Image credit: **ESO//S. Guisard **](http://www.eso.org/public/images/eso0934a/)"
+  overlay_image: "/assets/images/pastelblue.jpg"
+  overlay_filter: 0.4
+  caption:
 excerpt: ""
 
 feature_row:
