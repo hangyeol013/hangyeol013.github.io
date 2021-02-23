@@ -47,7 +47,7 @@ Supervised, Semi-supervised (partially supervised), unsupervised
 
 
 <p>
-  <img src="/assets/images/blog/DL_survey_introduction/Figure2.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_01.introduction/Figure2.png" style="width:40%">
   <figcaption>Fig.1 - Category of deep learning approaches.</figcaption>
 </p>
 
@@ -68,7 +68,7 @@ Table 1 shows the difference feature-based learning approaches with different le
 <br>
 
 <p>
-  <img src="/assets/images/blog/DL_survey_introduction/Table1.png" style="width:80%">
+  <img src="/assets/images/blog/DL_survey_01.introduction/Table1.png" style="width:80%">
   <figcaption>Table.1 - Different feature learning approaches.</figcaption>
 </p>
 

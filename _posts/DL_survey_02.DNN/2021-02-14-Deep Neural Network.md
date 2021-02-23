@@ -20,7 +20,7 @@ The main objective of this work is to provide an overall idea on deep learning a
 A brief history of neural networks highlighting key event is, as shown in Figure 8
 
 <p>
-  <img src="/assets/images/blog/DL_survey_DNN/Figure8.png" style="width:80%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/Figure8.png" style="width:80%">
   <figcaption>Fig.1 - The history of deep learning development.</figcaption>
 </p>
 
@@ -51,11 +51,11 @@ Here, I wrote the meaning of key words briefly, I'll add the details later.
 
 
 <p>
-  <img src="/assets/images/blog/DL_survey_DNN/equation1.png" style="width:30%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/equation1.png" style="width:30%">
 </p>
 
 - here r is the momentum and n is the learning rate for the tth round of training.
-- The main advantage of using momentum during tarining is to prevent the network from getting stuck in local minimum.
+- The main advantage of using momentum during training is to prevent the network from getting stuck in local minimum.
  (How??? explain with equation)
 - a higher momentum value overshoots its minimum, possibly making the network unstable.
 - In general r is set to 0.5 until the initial learning stabilizes and is then increased to 0.9 or higher.
@@ -72,14 +72,14 @@ Here, I wrote the meaning of key words briefly, I'll add the details later.
 1) Constant decay: we can define a constant which is applied to reduce the learning rate manually with a defined step function.  
 2) Factored decay: the learning rate can be adjusted during training with the following equation:  
 <p>
-  <img src="/assets/images/blog/DL_survey_DNN/equation2.png" style="width:10%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/equation2.png" style="width:10%">
 </p>
 n_t: the tth round learning rate,  
 n_0: the initial learning rate,  
 $\beta$: the decay factor with a value between the range of (0,1)  
 3) Exponential decay
 <p>
-  <img src="/assets/images/blog/DL_survey_DNN/equation3.png" style="width:10%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/equation3.png" style="width:10%">
 </p>
 - The common practice is to use a learning rate decay of beta=0.1 to reduce the learning rate by a factor of 10 at each stage.
 
@@ -87,11 +87,11 @@ $\beta$: the decay factor with a value between the range of (0,1)
 - used for training deep learning models as an L2 regularization approach, which helps to prevent overfitting the network and model generalization.
 - L2 regularization for F(theta, x) can be defined as,
  <p>
-   <img src="/assets/images/blog/DL_survey_DNN/equation4.png" style="width:30%">
+   <img src="/assets/images/blog/DL_survey_02.DNN/equation4.png" style="width:30%">
  </p>
 - the gradient for the weight theta is:
  <p>
-   <img src="/assets/images/blog/DL_survey_DNN/equation5.png" style="width:15%">
+   <img src="/assets/images/blog/DL_survey_02.DNN/equation5.png" style="width:15%">
  </p>
 - General practice is to use the value $/lambda$ = 0.0004.
 - A smaller lambda will accelerate training.
