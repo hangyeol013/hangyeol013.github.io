@@ -74,9 +74,9 @@ Here, I wrote the meaning of key words briefly, I'll add the details later.
 <p>
   <img src="/assets/images/blog/DL_survey_02.DNN/equation2.png" style="width:10%">
 </p>
-n_t: the tth round learning rate,  
-n_0: the initial learning rate,  
-$\beta$: the decay factor with a value between the range of (0,1)  
+*n<sub>t</sub>*: the tth round learning rate,  
+*n<sub>0</sub>*: the initial learning rate,  
+$ \beta $: the decay factor with a value between the range of (0,1)  
 3) Exponential decay
 <p>
   <img src="/assets/images/blog/DL_survey_02.DNN/equation3.png" style="width:10%">

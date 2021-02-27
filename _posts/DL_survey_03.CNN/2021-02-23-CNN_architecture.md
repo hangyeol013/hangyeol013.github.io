@@ -17,9 +17,9 @@ This part is the basics of CNNs so, if you have already known them, you can skip
 ### 3.2. Popular CNN Architectures
 
 In this section, several popular state-of-the-art CNN architectures will be examined. In general, most deep convolutional neural networks are made of a key set of basic layers, including the convolution layer, the sub-sampling layer, dense layers, and the soft-max layer. The architectures typically consist of stacks of several convolutional layers and max-pooling layers followed by a fully connected and SoftMax layers at the end.  
- - LeNet, **AlexNet**, **VGG Net**, NiN  
- - **DenseNet**, **FractalNet**, **GoogLeNet**, Inception units, Residual Networks  
-(Bold: the most popular architectures because of their state-of-the-art performance)
+- LeNet, **AlexNet**, **VGG Net**, NiN  
+- **DenseNet**, **FractalNet**, **GoogLeNet**, Inception units, Residual Networks  
+(Bold: the most popular architectures because of their state-of-the-art performance)  
 (* Fractal Net is an alternative of ResNet model)
 
 - The baisc building components (convolution and pooling) are almost the same across these architectures. However, some topological differences are observed in the modern deep learning architectures.
@@ -31,10 +31,11 @@ In this section, several popular state-of-the-art CNN architectures will be exam
 - LeCun proposed CNNs with the back-propagation algorithm and experimented on handwritten digit dataset to achieve state-of-the-art accuracy.  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure3.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure3.png" style="width:50%">
   <figcaption>Fig.3 - The architecture of LeNet.</figcaption>
 </p>
 
+<br>
 
 
 #### 3.2.2. AlexNet (2012)  
@@ -43,16 +44,16 @@ In this section, several popular state-of-the-art CNN architectures will be exam
 - It was a significant breakthrough in the field of machine learning and computer vision for visual recognition and classification tasks and is the point in history where interest in deep learning increased rapidly.  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure4.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure4.png" style="width:50%">
   <figcaption>Fig.4 - The architecture of AlexNet.</figcaption>
 </p>
 
 - Two new concepts, Local Response Normalization (LRN) and dropout, are introduced in this network.  
 - LRN can be applied in two different ways:  
-1) applying on single channel or feature maps  
-2) applying across the channels or feature maps (neighborhood along the third dimension but a single pixel or location)  
+1) Applying on single channel or feature maps  
+2) Applying across the channels or feature maps (neighborhood along the third dimension but a single pixel or location)  
 
-
+<br>
 
 #### 3.2.3. ZFNet / Clarifai (2013)  
 
@@ -61,20 +62,22 @@ In this section, several popular state-of-the-art CNN architectures will be exam
 - ZFNet uses 7x7 kernels instead of 11x11 kernels to significantly reduce the number of weights.  
 - This reduces the number of network parameters dramatically and improves overall recognition accuracy.  
 
-
+<br>
 
 #### 3.2.4. Network in Network (NiN)  
 
 - This model is slightly different from the previous models where a couple of new concepts are introduced.  
-1) multilayer perception convolution
-  - convolutions are performed with 1x1 filter that help to add more nonlinearity in the models.  
-  - This helps to increase the depth of the network, which can then be regularized with dropout.  
-  - This concept is used often in the bottleneck layer of a deep learning model.  
-2) Global Average Pooling (GAP) as an alternative of fully connected layers.  
-  - This helps to reduce the number of network parameters significantly.  
-  - By applying GAP on a large feature map, we can generate a final low dimensional feature vector without reducing the dimension of the feature maps.  
+<br>
+**1) multilayer perception convolution**
+- convolutions are performed with 1x1 filter that help to add more nonlinearity in the models.  
+- This helps to increase the depth of the network, which can then be regularized with dropout.  
+- This concept is used often in the bottleneck layer of a deep learning model.  
+<br>
+**2) Global Average Pooling (GAP) as an alternative of fully connected layers.**  
+- This helps to reduce the number of network parameters significantly.  
+- By applying GAP on a large feature map, we can generate a final low dimensional feature vector without reducing the dimension of the feature maps.  
 
-
+<br>
 
 #### 3.2.5. VGGNET (2014)  
 
@@ -83,7 +86,7 @@ In this section, several popular state-of-the-art CNN architectures will be exam
 - Three VGG-E models, VGG-11, VGG-16 and VGG-19 were proposed the model had 11, 16 and 19 layers respectively.  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure5.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure5.png" style="width:60%">
   <figcaption>Fig.5 - The basic building block of VGG network.</figcaption>
 </p>
 
@@ -95,18 +98,18 @@ In this section, several popular state-of-the-art CNN architectures will be exam
 #### 3.2.6. GoogLeNet (2014)  
 
 - GoogLeNet, the winner of ILSVRC 2014, was a model proposed by Christian Szegedy of Google with the objective of reducing computation complexity compared to the traditional CNN.  
-- The proposed method was to incorporate **Inception Layers** that had variable receptive fields, which were created by different kernel sizes.
+- The proposed method was to incorporate *Inception Layers* that had variable receptive fields, which were created by different kernel sizes.
 - These receptive fields created operations that captured sparse correlation patterns in the new feature map stack.  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure6.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure6.png" style="width:60%">
   <figcaption>Fig.6 - Inception layer: Naive version.</figcaption>
 </p>
 
 The initial concept of the Inception layer can be seen in Figure 6. GoogLeNet improved state-of-the-art recognition accuracy using a stack of Inception layers, seen in Figure 7.
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure7.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure7.png" style="width:60%">
   <figcaption>Fig.7 - Inception layer: Naive version.</figcaption>
 </p>
 
@@ -125,16 +128,16 @@ The initial concept of the Inception layer can be seen in Figure 6. GoogLeNet im
 - ResNet is developed with many different numbers of layers: 34, 50, 101, 152 and even 1202. The popular ResNet50 contained 49 convolution layers and 1 fully connected layer at the end of the network.  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure8.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure8.png" style="width:30%">
   <figcaption>Fig.8 - Basic diagram of the Residual block.</figcaption>
 </p>
 
 - The basic block diagram of the ResNet architecture is shown in Figure8.  
-- The output of a residual layer can be defined based on the outputs of (l-1)^th which comes from the previous layer defined as x_l-1.  
-- F(x_l-1) is the output after performing various operations (e.g., convolution, Batch Normalization, activation function), the final output of residual unit is x_l which can be defined with the following equation:  
+- The output of a residual layer can be defined based on the outputs of (l-1)<sup>th</sup> which comes from the previous layer defined as x<sub>l-1</sub>.  
+- F(x<sub>l-1</sub>) is the output after performing various operations (e.g., convolution, Batch Normalization, activation function), the final output of residual unit is x<sub>l</sub> which can be defined with the following equation:  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/equation6.png" style="width:10%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/equation6.png" style="width:30%">
 </p>
 
 - The residual network consists of several basic residual blocks, but the operations in the residual block can be varied depending on the different architecture of residual networks.  
@@ -152,22 +155,22 @@ The initial concept of the Inception layer can be seen in Figure 6. GoogLeNet im
 #### 3.2.8. Densely Connected Network (DenseNet)  
 
 - DenseNet consists of densely connected CNN layers, the outputs of each layer are connected with all successor layers in a dense block.  
-- This concept is efficient for feature resue, which dramatically reduces network parameters.  **(WHY???)**  
+- This concept is efficient for feature reuse, which dramatically reduces network parameters.  **(WHY???)**  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure10.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure10.png" style="width:60%">
   <figcaption>Fig.10 - A 4-layer Dense block with a growth rate of k=3.</figcaption>
 </p>
 
-- The l^th layer received all the feature maps from previous layers as input:
+- The l<sup>th</sup> layer received all the feature maps from previous layers as input:
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/equation7.png" style="width:10%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/equation7.png" style="width:30%">
 </p>
 
 - DenseNet consists of several dense blocks and transition blocks, which are placed between two adjacent dense blocks.  
-- H_l(.) performs three different consecutive operations: Batch-Normalization, followed by a ReLU and a 3x3 convolution operation.
-- In the transation block, 1x1 convolutional operations are performed with BN followed by a 2x2 average pooling layer.  
+- H<sub>l</sub>(.) performs three different consecutive operations: Batch-Normalization, followed by a ReLU and a 3x3 convolution operation.
+- In the transaction block, 1x1 convolutional operations are performed with BN followed by a 2x2 average pooling layer.  
 - This new model shows state-of-the-art accuracy with a reasonable number of network parameters for object recognitions tasks.  
 
 
@@ -179,10 +182,101 @@ The initial concept of the Inception layer can be seen in Figure 6. GoogLeNet im
 - As a result, this concept helps to enforce speed versus accuracy tradeoffs.  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure11.png" style="width:40%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure11.png" style="width:50%">
   <figcaption>Fig.11 - The detailed FractalNet module on the left and FractalNet on the right.</figcaption>
 </p>
 
 
 
 #### 3.3. CapsuleNet  
+
+- CNNs are an effective methodology for detecting features of an object and achieving good recognition performance compared to state-of-the-art handcrafted feature detectors.  
+- There are **limits to CNNs**, which are that it does not take into account **special relationships**, **perspective**, **size**, and **orientation, of features**.  
+- Imagine a neuron which contains the likelihood with properties of features (perspective, orientation, size etc.).  
+- This special type of neurons, capsules, can detect face efficiently with distinct information.  
+- The capsule network consists of several layers of capsule nodes.  
+
+<p>
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure12.png" style="width:80%">
+  <figcaption>Fig.12 - A CapsNet encoding unit with 3 layers.</figcaption>
+</p>
+
+- The entire encoding and decoding processes of CapsNet is shown in figures 12 and 13.  
+- The primary capsuels are used 8x32 kernels which generates 32x8x6x6 (32 groups for 8 neurons with 6x6 size)  
+- Even if a feature moves if it is still under a max pooling window it can be detected.  
+- As the capsule contains the weighted sum of features from the previous layer, therefore this approach is capable of detecting overlapped features which is important for segmentation and detection tasks.  
+
+<p>
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure12.png" style="width:80%">
+  <figcaption>Fig.13 - The decoding unit where a digit is reconstructed from DigitCaps layer representation. The Euclidean distance is used minimizing the error between the input sample and the reconstructed sample from the sigmoid layer. True labels are used for reconstruction target during training.
+  </figcaption>
+</p>
+
+- In the traditional CNN, a single cost function is used to evaluate the overall error which propagates backward during training.  
+- However, in this case, if the weight between two neurons is zero, then the activation of a neuron is not propagated from that neuron.  
+- The signal is routed with respect to the feature parameters rather than a one size fits all cost function in iterative dynamic routing with the agreement.  
+- This new CNN architecture provides state-of-the-art accuracy for handwritten digit recognition on MNIST.  
+- However, from an application point of view, this architecture is more suitable for segmentation and detection tasks compare to classification task.  
+- CapsNet paper: [Dynamic routing between capsules](https://arxiv.org/pdf/1710.09829.pdf).
+
+
+#### 3.4. Comparison of Different Models  
+
+- The comparison of recently proposed models based on error, network parameters, and a maximum number of connections are given in Table 1.  
+
+<p>
+  <img src="/assets/images/blog/DL_survey_03.CNN/Table1.png" style="width:80%">
+  <figcaption>Table 1 - The top-5% errors with computational parameters and macs for different deep CNN models.  </figcaption>
+</p>
+
+
+#### 3.5. Other DNN Models  
+
+- Xception (popular in the computer vision community), RCNN (Recurrent Convolution Neural Network), IRCNN (Inception Convolutional Recurrent Neural Networks, provided better accuracy compared RCNN and inception network with almost identical network parameters)
+- ViP CNN (Visual Phase Guided CNN): Proposed with phase guided message passing a structure (PMPS) to build connections between relational components, which show better speed up and recognition accuracy.  
+- FCN (Fully convolutional network): Proposed for segmentation tasks.  
+- Pixel Net, A deep network with stochastic depth, deeply-supervised networks, and ladder network.  
+
+
+
+#### 3.6. Applications of CNNs  
+
+
+##### CNNs for Solving A Graph Problem)  
+- Learning graph data structures is a common problem with various applications in data mining and machine learning tasks.  
+- DL techniques have made a bridge in between the machine learning and data mining groups.  
+
+##### Image Processing and Computer Vision)  
+
+- There is a good survey on DL approaches for image processing and computer vision related tasks, including image classification, segmentation and detection: [Available online](https://github.com/kjw0612/awesome-deep-vision)  
+- The DL approaches are massively applied to human activity recognition tasks and achieved state-of-the-art performance compared to exiting approaches.  
+- However, the state-of-the-art models for classification, segmentation and detection task are listed as follows:  
+
+**(1) Models for classification problems:**  
+- The models with classification layer can be used as feature extraction for segmentation and detection tasks.  
+- AlexNet, VGGNet, GoogleNet, ResNet, DenseNet, FractalNet, CapsuleNet, IRCNN, IRRCNN, DCRN, and so on...  
+
+**(2) Models for segmentation problems:**  
+- The segmentaion model consists of two units: Encoding and Decoding units.  
+- The encoding unit: Convolution, Subsampling operations to encode to the lower dimensional latent space.    
+- The decoding unit: Deconvolution, Up-sampling operation to decode the image from latent space.  
+- FCN, SegNet, RefineNet, PSPNet, DeepLab, UNet and R2U-Net.  
+
+**(3) Models for detection problems:**  
+- The detection problem is a bit different compared to classification and segmentation problems.  
+- In this case, the model goal is to identify target types with its corresponding position.  
+- The model answers two questions: what is the object (classification problem)? and where is the object (regression problem)?
+- To achieve these goals, two losses are calculated for classification and regression unit in top of the feature extraction module and the model weights are updated with respect to the both loses.  
+- RCNN, fast RCNN, mask R-CNN, YOLO, SSD (single Shot MultiBox Detection) and UD-Net  
+
+
+##### Speech Processing  
+
+- CNNs are also applied to speech processing, such as speech enhancement using multimodal deep CNN, and audio tagging using CGRN (Convolutional Gated Reccurent Network).  
+
+
+##### CNN for Medical Imaging  
+
+- Several popular DL methods were developed for medical image analysis.  
+- MDNet: Developed for medical diagnosis using images and corresponding text description.  
+- Cardiac Segmentation using short-Axis MRI, segmentation of optic disc and retinal vasculature using CNN, brain tumor segmentation using random forests with features learned with fully convolutional neural network.  
