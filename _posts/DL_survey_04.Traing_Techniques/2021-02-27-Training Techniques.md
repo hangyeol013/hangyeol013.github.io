@@ -1,5 +1,5 @@
 ---
-title:  "Deep Learining survey_5.Advanced Training Techniques"
+title:  "Deep Learning survey_5.Advanced Training Techniques"
 search: true
 categories:
   - Deep learning
@@ -40,6 +40,7 @@ Presently different approaches have been applied before feeding the data to the 
 <br>
 
 ### 4.3. Batch Normalization  
+(+) Why Input Normalization???
 
 - Batch normalization helps accelerate DL processes by reducing internal covariance by shifting input samples.  
 (what that means is the inputs are linearly transformed to have zero mean and unit variance)  

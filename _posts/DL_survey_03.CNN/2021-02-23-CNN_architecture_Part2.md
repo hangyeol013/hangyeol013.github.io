@@ -1,97 +1,28 @@
 ---
-title:  "Deep Learining survey_4.CNN_acthitectures"
+title:  "Deep Learning survey_4.CNN_acthitectures_Part.2(GoogLeNet, ResNet, DenseNet)"
 search: true
 categories:
   - Deep learning
 classes: wide
-summary: This post is the fourth part (CNN section) of summary of a survey paper.
+summary: This post is the fourth part (popular CNN architecture section) of summary of a survey paper.
 last_modified_at: 2021-02-23T08:06:00-05:00
 ---
 
 
-This post is the fourth part (CNN section) of summary of a survey paper
+This post is the fourth part (popular CNN architecture section) of summary of a survey paper
 [A state-of-the Art survey on Deep learning theory and architecture](https://www.mdpi.com/2079-9292/8/3/292).  
 This part is the basics of CNNs so, if you have already known them, you can skip this part.
 
 
 ### 3.2. Popular CNN Architectures
 
-In this section, several popular state-of-the-art CNN architectures will be examined. In general, most deep convolutional neural networks are made of a key set of basic layers, including the convolution layer, the sub-sampling layer, dense layers, and the soft-max layer. The architectures typically consist of stacks of several convolutional layers and max-pooling layers followed by a fully connected and SoftMax layers at the end.  
+In this section, several popular state-of-the-art CNN architectures will be examined. In general, most deep convolutional neural networks are made of a key set of basic layers, including the `convolution layer`, the `sub-sampling layer`, `dense layers`, and the `soft-max layer`. The architectures typically consist of stacks of several convolutional layers and max-pooling layers followed by a fully connected and SoftMax layers at the end.  
 - LeNet, **AlexNet**, **VGG Net**, NiN  
 - **DenseNet**, **FractalNet**, **GoogLeNet**, Inception units, Residual Networks  
 (Bold: the most popular architectures because of their state-of-the-art performance)  
 (* Fractal Net is an alternative of ResNet model)
 
-- The baisc building components (convolution and pooling) are almost the same across these architectures. However, some topological differences are observed in the modern deep learning architectures.
-
-
-#### 3.2.1. LeNet (1998)  
-
-- Limited computation capability and memory capacity made the algorithm difficult to implement until about 2010.  
-- LeCun proposed CNNs with the back-propagation algorithm and experimented on handwritten digit dataset to achieve state-of-the-art accuracy.  
-
-<p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure3.png" style="width:50%">
-  <figcaption>Fig.3 - The architecture of LeNet.</figcaption>
-</p>
-
-<br>
-
-
-#### 3.2.2. AlexNet (2012)  
-
-- In 2012, Alex Krizhevesky proposed a deeper and wider CNN model compared to LeNet and won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2012.
-- It was a significant breakthrough in the field of machine learning and computer vision for visual recognition and classification tasks and is the point in history where interest in deep learning increased rapidly.  
-
-<p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure4.png" style="width:50%">
-  <figcaption>Fig.4 - The architecture of AlexNet.</figcaption>
-</p>
-
-- Two new concepts, Local Response Normalization (LRN) and dropout, are introduced in this network.  
-- LRN can be applied in two different ways:  
-1) Applying on single channel or feature maps  
-2) Applying across the channels or feature maps (neighborhood along the third dimension but a single pixel or location)  
-
-<br>
-
-#### 3.2.3. ZFNet / Clarifai (2013)  
-
-- In 2013, Matthew Zeiler and Rob Fergue won the 2013 ILSVRC with a CNN architecture which was an extension of AlexNet.  
-- As CNNs are expensive computationally, an optimum use of parameters is needed from a model complexity point of view.  
-- ZFNet uses 7x7 kernels instead of 11x11 kernels to significantly reduce the number of weights.  
-- This reduces the number of network parameters dramatically and improves overall recognition accuracy.  
-
-<br>
-
-#### 3.2.4. Network in Network (NiN)  
-
-- This model is slightly different from the previous models where a couple of new concepts are introduced.  
-<br>
-**1) multilayer perception convolution**
-- convolutions are performed with 1x1 filter that help to add more nonlinearity in the models.  
-- This helps to increase the depth of the network, which can then be regularized with dropout.  
-- This concept is used often in the bottleneck layer of a deep learning model.  
-<br>
-**2) Global Average Pooling (GAP) as an alternative of fully connected layers.**  
-- This helps to reduce the number of network parameters significantly.  
-- By applying GAP on a large feature map, we can generate a final low dimensional feature vector without reducing the dimension of the feature maps.  
-
-<br>
-
-#### 3.2.5. VGGNET (2014)  
-
-- The Visual Geometry Group (VGG), was the runner-up of the 2014 ILSVRC.  
-- The main contribution of this work is that it shows that the depth of a network is a critical component to achieve better recognition or classification accuracy in CNNs.  
-- Three VGG-E models, VGG-11, VGG-16 and VGG-19 were proposed the model had 11, 16 and 19 layers respectively.  
-
-<p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure5.png" style="width:60%">
-  <figcaption>Fig.5 - The basic building block of VGG network.</figcaption>
-</p>
-
-- All versions of the VGG-E models ended the same with three fully connected layers.  
-
+The basic building components (convolution and pooling) are almost the same across these architectures. However, some topological differences are observed in the modern deep learning architectures.
 
 
 

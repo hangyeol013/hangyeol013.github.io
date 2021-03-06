@@ -1,5 +1,5 @@
 ---
-title:  "Deep Learining survey_1.Introduction"
+title:  "Deep Learning survey_1.Introduction"
 search: true
 categories:
   - Deep learning
