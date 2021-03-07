@@ -1,15 +1,15 @@
 ---
-title:  "Deep Learning survey_4.CNN_acthitectures_Part.2(GoogLeNet, ResNet, DenseNet)"
+title:  "Deep Learning survey_5.CNN_acthitectures_Part.2(GoogLeNet, ResNet, DenseNet)"
 search: true
 categories:
   - Deep learning
 classes: wide
-summary: This post is the fourth part (popular CNN architecture section) of summary of a survey paper.
+summary: This post is the fifth part (popular CNN architecture section) of summary of a survey paper.
 last_modified_at: 2021-02-23T08:06:00-05:00
 ---
 
 
-This post is the fourth part (popular CNN architecture section) of summary of a survey paper
+This post is the fifth part (popular CNN architecture section) of summary of a survey paper
 [A state-of-the Art survey on Deep learning theory and architecture](https://www.mdpi.com/2079-9292/8/3/292).  
 This part is the basics of CNNs so, if you have already known them, you can skip this part.
 

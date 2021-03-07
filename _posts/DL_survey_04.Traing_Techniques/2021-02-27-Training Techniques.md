@@ -1,15 +1,15 @@
 ---
-title:  "Deep Learning survey_5.Advanced Training Techniques"
+title:  "Deep Learning survey_6.Advanced Training Techniques"
 search: true
 categories:
   - Deep learning
 classes: wide
-summary: This post is the fifth part (Advanced Training Techniques) of summary of a survey paper.
+summary: This post is the sixth part (Advanced Training Techniques) of summary of a survey paper.
 last_modified_at: 2021-02-27T08:06:00-05:00
 ---
 
 
-This post is the fifth part (Advanced Training Techniques) of summary of a survey paper
+This post is the sixth part (Advanced Training Techniques) of summary of a survey paper
 [A state-of-the Art survey on Deep learning theory and architecture](https://www.mdpi.com/2079-9292/8/3/292).  
 The main objective of this work is to provide an overall idea on deep learning and its related fields.
 

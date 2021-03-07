@@ -1,5 +1,5 @@
 ---
-title:  "Deep Learning survey_2.Deep Neural networks"
+title:  "Deep Learning survey_2.Deep Neural network (DNN)"
 search: true
 categories:
   - Deep learning
