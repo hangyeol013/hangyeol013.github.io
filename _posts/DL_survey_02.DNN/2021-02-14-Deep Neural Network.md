@@ -4,6 +4,10 @@ search: true
 categories:
   - Deep learning
 summary: This post is the second part (Deep Neural Network) of summary of a survey paper.
+toc: true
+toc_sticky: true
+header:
+  teaser: /assets/images/thumbnails/thumb_basic.jpg
 last_modified_at: 2021-02-14T08:06:00-05:00
 ---
 

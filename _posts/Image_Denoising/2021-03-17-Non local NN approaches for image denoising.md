@@ -5,6 +5,10 @@ categories:
   - Deep learning
   - Image denoising
 summary: This post is a summary of image denoising review paper.
+toc: true
+toc_sticky: true
+header:
+  teaser: /assets/images/thumbnails/thumb_basic.jpg
 last_modified_at: 2021-03-17T08:06:00-05:00
 ---
 
