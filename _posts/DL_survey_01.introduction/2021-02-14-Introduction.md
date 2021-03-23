@@ -58,7 +58,7 @@ Supervised, Semi-supervised (partially supervised), unsupervised (Another catego
 **Deep Learning:** A subfield of machine learning based on artificial neural networks `with representation learning`.
 
 
-###### A key difference between `traditional ML` and `DL` is in `how features are extracted`.  
+**A key difference between `traditional ML` and `DL` is in `how features are extracted`.**  
 **Traditional ML:** `handcrafted engineering features` by applying several feature extraction algorithm, and then apply the learning algorithms.  
 **DL:** the features are `learned automatically` and are represented hierarchically in multiple levels.
 

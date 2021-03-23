@@ -57,10 +57,10 @@ Here, I wrote the meaning of key words briefly, I'll post on other page about op
 
 
 <p>
-  <img src="/assets/images/blog/DL_survey_02.DNN/equation1.png" style="width:30%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/equation1.png" style="width:40%">
 </p>
 
-- here r is the momentum and n is the learning rate for the tth round of training.
+- here r is the momentum and n is the learning rate for the *t*th round of training.
 - The main advantage of using momentum during training is to prevent the network from getting stuck in local minimum.
  (How??? explain with equation)
 - a higher momentum value overshoots its minimum, possibly making the network unstable.
@@ -78,14 +78,14 @@ Here, I wrote the meaning of key words briefly, I'll post on other page about op
 1) Constant decay: we can define a constant which is applied to reduce the learning rate manually with a defined step function.  
 2) Factored decay: the learning rate can be adjusted during training with the following equation:  
 <p>
-  <img src="/assets/images/blog/DL_survey_02.DNN/equation2.png" style="width:10%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/equation2.png" style="width:20%">
 </p>
 *n<sub>t</sub>*: the tth round learning rate,  
 *n<sub>0</sub>*: the initial learning rate,  
-$ \beta $: the decay factor with a value between the range of (0,1)  
+$\beta$: the decay factor with a value between the range of (0,1)  
 3) Exponential decay
 <p>
-  <img src="/assets/images/blog/DL_survey_02.DNN/equation3.png" style="width:10%">
+  <img src="/assets/images/blog/DL_survey_02.DNN/equation3.png" style="width:20%">
 </p>
 - The common practice is to use a learning rate decay of beta=0.1 to reduce the learning rate by a factor of 10 at each stage.
 
@@ -93,11 +93,11 @@ $ \beta $: the decay factor with a value between the range of (0,1)
 - used for training deep learning models as an L2 regularization approach, which helps to prevent overfitting the network and model generalization.
 - L2 regularization for F(theta, x) can be defined as,
  <p>
-   <img src="/assets/images/blog/DL_survey_02.DNN/equation4.png" style="width:30%">
+   <img src="/assets/images/blog/DL_survey_02.DNN/equation4.png" style="width:40%">
  </p>
 - the gradient for the weight theta is:
  <p>
-   <img src="/assets/images/blog/DL_survey_02.DNN/equation5.png" style="width:15%">
+   <img src="/assets/images/blog/DL_survey_02.DNN/equation5.png" style="width:20%">
  </p>
 - General practice is to use the value $/lambda$ = 0.0004.
 - A smaller lambda will accelerate training.
