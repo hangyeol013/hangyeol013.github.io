@@ -3,7 +3,6 @@ title:  "Deep Learning survey_4.CNN_acthitectures_Part.1(LeNet, AlexNet, VGGNet)
 search: true
 categories:
   - Deep learning
-classes: wide
 summary: This post is the fourth part (popular CNN architecture section) of summary of a survey paper.
 last_modified_at: 2021-02-23T08:06:00-05:00
 ---

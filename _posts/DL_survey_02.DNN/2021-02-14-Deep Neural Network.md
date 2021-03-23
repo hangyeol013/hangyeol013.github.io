@@ -3,7 +3,6 @@ title:  "Deep Learning survey_2.Deep Neural network (DNN)"
 search: true
 categories:
   - Deep learning
-classes: wide
 summary: This post is the second part (Deep Neural Network) of summary of a survey paper.
 last_modified_at: 2021-02-14T08:06:00-05:00
 ---

@@ -3,7 +3,6 @@ title:  "Deep Learning survey_6.Advanced Training Techniques"
 search: true
 categories:
   - Deep learning
-classes: wide
 summary: This post is the sixth part (Advanced Training Techniques) of summary of a survey paper.
 last_modified_at: 2021-02-27T08:06:00-05:00
 ---

@@ -180,31 +180,39 @@ Even if there is vanishing gradient for the weight layers, we always still have 
 
 
 
-
-
-
-<p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure8.png" style="width:30%">
-  <figcaption>Fig.8 - Basic diagram of the Residual block.</figcaption>
-</p>
-
-- The basic block diagram of the ResNet architecture is shown in Figure8.  
-- The output of a residual layer can be defined based on the outputs of (l-1)<sup>th</sup> which comes from the previous layer defined as x<sub>l-1</sub>.  
-- F(x<sub>l-1</sub>) is the output after performing various operations (e.g., convolution, Batch Normalization, activation function), the final output of residual unit is x<sub>l</sub> which can be defined with the following equation:  
+###### 3. ResNet Architecture  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/equation6.png" style="width:30%">
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure28.png" style="width:60%">
+  <figcaption>Fig.8 - 34-layer ResNet with Skip/Shortcut (top), 34-layer Plain Network (middle) and 19-layer VGG-19 (bottom).</figcaption>
 </p>
 
-- The residual network consists of several basic residual blocks, but the operations in the residual block can be varied depending on the different architecture of residual networks.  
-- Recently, some other variants of residual models have been introduced based on the Residual Network architecture.  (there are several advanced architectures that are combined with inception and residual units which can be seen in Figure9)
+For ResNet, there are 3 types of skip / shortcut connections when the input dimensions are smaller than the output dimensions.  
+
+(a) Shortcut performs identity mapping, with extra zero padding for increasing dimensions. Thus, no extra parameters.  
+(b) The projection shortcut is used for increasing dimensions only, the other shortcuts are identity. Extra parameters are needed.  
+(c) All shortcuts are projections. Extra parameters are more than that of (b).  
+
+
+###### 4. Bottleneck Design  
+
+Since the network is very deep now, the time complexity is high. A bottleneck design is used to reduce the complexity as follows:  
 
 <p>
-  <img src="/assets/images/blog/DL_survey_03.CNN/Figure9.png" style="width:40%">
-  <figcaption>Fig.9 - The basic block diagram for Inception Residual unit.</figcaption>
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure29.png" style="width:60%">
+  <figcaption>Fig.9 - The Basic Block (left) and the proposed bottleneck design (right).</figcaption>
 </p>
 
-- The concept of Inception block with residual connections is introduced in the Inception-v4 architecture.  
+The 1x1 conv layers are added to the start and end of network like being used in NIN and GoogLeNet. It turns out that 1x1 conv can reduce the number of connections (parameters) while not degrading the performance of the network so much.  
+
+With the bottleneck design, 34-layer ResNet become 50-layer ResNet. And there are deeper network with the bottleneck design: ResNet-101 and ResNet-152. The overall architecture for all network is as below:  
+
+<p>
+  <img src="/assets/images/blog/DL_survey_03.CNN/Figure30.png" style="width:60%">
+  <figcaption>Fig.10 - The overall architecture for all network.</figcaption>
+</p>
+
+It is noted that VGG-16/19 has 15.3/19/6 billion FLOPS. ResNet-152 still has lower complexity than VGG-16/19.  
 
 
 

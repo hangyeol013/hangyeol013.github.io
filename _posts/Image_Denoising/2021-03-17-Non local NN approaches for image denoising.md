@@ -4,7 +4,6 @@ search: true
 categories:
   - Deep learning
   - Image denoising
-classes: wide
 summary: This post is a summary of image denoising review paper.
 last_modified_at: 2021-03-17T08:06:00-05:00
 ---
