@@ -3,11 +3,15 @@ title:  "Deep Learning survey_4.CNN_acthitectures_Part.1(LeNet, AlexNet, VGGNet)
 search: true
 categories:
   - Deep learning
+date: February 23, 2021
 summary: This post is the fourth part (popular CNN architecture section) of summary of a survey paper.
 toc: true
 toc_sticky: true
 header:
   teaser: /assets/images/thumbnails/thumb_basic.jpg
+tags:
+  - Deep Learning
+  - CNN
 last_modified_at: 2021-02-23T08:06:00-05:00
 ---
 
@@ -57,7 +61,7 @@ The basic building components (convolution and pooling) are almost the same acro
 
 From this part, I referred a post from [Review of LeNet](https://towardsdatascience.com/review-of-lenet-5-how-to-design-the-architecture-of-cnn-8ee92ff760ac)  
 
-##### Globally trainable system
+##### (1) Globally trainable system
 
 ###### What's a globally trainable system?  
 
@@ -68,7 +72,7 @@ From the perspective of back-propagation, if all the modules are differentiable 
 - In traditional solution, we often feed the machine learning model with the hand-designed features, but with globally trainable system, we can let the data tell us which are the most important features for a certain task.  
 
 
-##### Design the CNN with knowledge  
+##### (2) Design the CNN with knowledge  
 
 In order to get self-learned features from neural network, we have to design a good architecture for the neural network.  Yann LuCun indicated in his paper that *'No learning technique can succeed without a minimal amount of prior knowledge about the task. ... a good way to incorporate with knowledge is to tailor its architecture to the task'*.
 
@@ -110,7 +114,7 @@ With all these knowledge, we have general principle to design a CNN.
 - AlexNet contains five convolutional and three fully-connected layers.  
 - The output of the last fully-connected layer is sent to a 1000-way softmax layer which corresponds to 1000 class labels in the ImageNet dataset.  
 
-##### ReLU nonlinearity  
+##### (1) ReLU nonlinearity  
 
 Before AlexNet, `sigmoid` and `tanh` were usually used as activations which are `saturating nonlinearities`. AlexNet uses `Rectified Linear Units (ReLU)` activations which are `non-saturating nonlinearity`.  
 The benefits of ReLU are:  
@@ -124,12 +128,12 @@ The benefits of ReLU are:
 </p>
 
 
-##### Multi-GPUs  
+##### (2) Multi-GPUs  
 
 We can see that the architecture is split into two parallel parts. In AlexNet, 1.2 million training parameters are `too big to fit` the NVIDIA GTX GPU with 3 GB of memory. Therefore, the author spread the network across two GPUs. In this paper, the usage of two GPUs is due to memory limitation, not for distributed training as in current years. Nowadays, the NVIDIA GPUs are large enough to handle this tasks.
 
 
-##### Overlapping Pooling  
+##### (3) Overlapping Pooling  
 
 `Pooling layers` in CNNs summarize the outputs of neighboring groups of neurons in the same kernel map. Traditionally, the neighbor neurons by adjacent pooling units do not overlap. To be more precise, a pooling layer can be thought of as consisting of a grid of pooling units spaced *s* pixels apart, each summarizing a neighborhood of size *z* x *z* centered at the location of the pooling unit.  
 If we set `*s*=*z*`, we obtain `traditional local pooling` as commonly employed in CNNs.  
@@ -137,7 +141,7 @@ If we set `*s*<*z*`, we obtain `overlapping pooling`.
 This is what they use throughout their network, with *s* = 2 and *z* = 3. This scheme reduces the top-1 and top-5 error rates by 0.4% and 0.3%, respectively, as compared to max pooling of size 2x2 with stride 2. The author also said that they generally observe during training that models with overlapping pooling find it slightly more `difficult to overfit`.   
 
 
-##### Local Response Normalization  
+##### (4) Local Response Normalization  
 
 Local Response Normalization (LRN) is used in AlexNet to help with generalization.  
 
@@ -154,7 +158,7 @@ Nowadays, batch normalization is used instead of LRN.
 
 
 
-##### Dropout)  
+##### (5) Dropout  
 They use `Dropout` to help reducing overfitting.  
 
 - `Combining the predictions of many different models` is a very successful way to reduce test errors, but it appears to be `too expensive` for big neural networks that already take several days to train.  
@@ -167,7 +171,7 @@ They use `Dropout` to help reducing overfitting.
 In implementation, it is common to `rescale the remainder neurons`, which are not dropped out, by dividing by *(1-p)* in training time. Therefore, we `don't need to scale in test time`.  
 
 
-##### Data Augmentation  
+##### (6) Data Augmentation  
 They use `Data Augmentation` to help reducing overfitting. The easiest and most common method to reduce overfitting on image data is to artificially enlarge the dataset using label-preserving transformations.  
 
 AlexNet uses two forms of data augmentation, both of which allow transformed images to be produced from the original images with very little computation, so the transformed images do not need to be stored on disk.  
@@ -178,7 +182,7 @@ AlexNet uses two forms of data augmentation, both of which allow transformed ima
 - Perform PCA on the set of RGB pixel values throughout the training set. Then use the eigenvalues and eigenvectors to manipulate the pixel intensities. Eigenvalues are selected once for entire pixels of an particular image.  
 
 
-##### Other details  
+##### (7) Other details  
 
 - Batch size: 128  
 - Momentum: 0.9  
@@ -206,12 +210,12 @@ Train roughly 90 cycles with 1.2 million training images, which took 5 to 6 days
 - This model is slightly different from the previous models where a couple of new concepts are introduced.  
 <br>
 
-##### multilayer perception convolution
+##### (1) multilayer perception convolution
 - convolutions are performed with 1x1 filter that help to add more nonlinearity in the models.  
 - This helps to increase the depth of the network, which can then be regularized with dropout.  
 - This concept is used often in the bottleneck layer of a deep learning model.  
-<br>
-##### Global Average Pooling (GAP) as an alternative of fully connected layers.  
+
+##### (2) Global Average Pooling (GAP) as an alternative of fully connected layers.  
 - This helps to reduce the number of network parameters significantly.  
 - By applying GAP on a large feature map, we can generate a final low dimensional feature vector without reducing the dimension of the feature maps.  
 
@@ -240,14 +244,14 @@ Train roughly 90 cycles with 1.2 million training images, which took 5 to 6 days
 - ILSVRC uses a subset of ImageNet of around 1000 images in each of 1000 categories.  
 - In all, there are roughly 1.3 million training images, 50,000 validation images and 100,000 testing images.  
 
-##### The use of 3x3 Filters  
+##### (1) The use of 3x3 Filters  
 
 - By using 2 layers of 3x3 filters, it actually have already covered 5x5 area and by using 3 layers of 3x3 filters, it actually have already covered 7x7 effective area.  
 - Thus, large-size filters such as 11x11 in AlexNet and 7x7 in ZFNet indeed are not needed.  
 
-- The number of parameters are also **fewer**.  
-**1 layer of 11x11 filter**, # of parameters = 11 x 11 = 121
-**5 layers of 3x3 filter**, # of parameters = 3 x 3 x 5 = 45
+The number of parameters are also **fewer**.  
+**1 layer of 11x11 filter**, # of parameters = 11 x 11 = 121  
+**5 layers of 3x3 filter**, # of parameters = 3 x 3 x 5 = 45  
 -> **Number of parameters is reduced by 63%**  
 
 **1 layer of 5x5 filter**, # of parameters = 5 x 5 = 25  
@@ -257,7 +261,7 @@ Train roughly 90 cycles with 1.2 million training images, which took 5 to 6 days
 With fewer parameters to be learnt, it is better for faster convergence, and reduced overfitting problem.  
 
 
-##### VGG-16 and VGG-19 Based on Ablation Study  
+##### (2) VGG-16 and VGG-19 Based on Ablation Study  
 
 <p>
   <img src="/assets/images/blog/DL_survey_03.CNN/Figure17.png" style="width:60%">
@@ -271,7 +275,7 @@ To obtain the optimum deep learning layer structure, ablation study has been don
 - We can observe that VGG-16 and VGG-19 start converging and the accuracy improvement is slowing down.  
 
 
-##### Multi-scale Training  
+##### (3) Multi-scale Training  
 
 As object has different scale within the image, if we only train the network at the same scale, we might miss the detection or have the wrong classification for the objects with other scales. To tackle this, authors propose multi-scale training.  
 
@@ -293,7 +297,7 @@ By using multi-scale training, we can imagine that it is more accurate for test 
 </p>
 
 
-##### Multi-scale Testing  
+##### (4) Multi-scale Testing  
 
 Similar to multi-scale training, multi-scale testing can also reduce the error rate since we do not know the size of object in the test image. If we scale the test image to different sizes, we can increase the chance of correct classification.  
 
@@ -306,7 +310,7 @@ Similar to multi-scale training, multi-scale testing can also reduce the error r
 - By using both multi-scale training and testing, error rate is reduced compared to only multi-scale testing.  
 
 
-##### Dense (Convolutionalized) Testing  
+##### (5) Dense (Convolutionalized) Testing  
 
 Multi-crop evaluation is complementary to dense evaluation due to different convolution boundary conditions: when applying a ConvNet to a crop, the convolved feature maps are padded with zeros, while in the case of dense evaluation the padding for the same crop naturally comes form the neighboring parts of an image (due to both the convolutions and spatial pooling), which substantially increases the overall network receptive field, so more context is captured.  
 

@@ -8,6 +8,8 @@ toc: true
 toc_sticky: true
 header:
   teaser: /assets/images/thumbnails/thumb_basic.jpg
+tags:
+  - Deep Learning
 last_modified_at: 2021-02-14T08:06:00-05:00
 ---
 

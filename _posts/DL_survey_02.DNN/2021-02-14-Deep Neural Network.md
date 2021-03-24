@@ -3,11 +3,14 @@ title:  "Deep Learning survey_2.Deep Neural network (DNN)"
 search: true
 categories:
   - Deep learning
+date: February 14, 2021
 summary: This post is the second part (Deep Neural Network) of summary of a survey paper.
 toc: true
 toc_sticky: true
 header:
   teaser: /assets/images/thumbnails/thumb_basic.jpg
+tags:
+  - Deep Learning
 last_modified_at: 2021-02-14T08:06:00-05:00
 ---
 
@@ -125,7 +128,7 @@ Regularization
 
 This contents are from deep learning book (chapter5. Machine learning basics) written by Ian Goodfellow.  
 
-#### 1.Learning algorithms  
+#### (1) Learning algorithms  
 If a computer program's performance at tasks in T, as measured by P, improves with experience E, it is said to learn form experience E with respect to some class of tasks T and performance measure P.  
 
 **The task, T)**  
@@ -152,7 +155,7 @@ If a computer program's performance at tasks in T, as measured by P, improves wi
 - Unsupervised Learning  
 - Reinforcement Learning  
 
-#### 2.Overfitting and Underfitting  
+#### (2) Overfitting and Underfitting  
 
 **Generalization:** The ability to perform well on previously unobserved inputs.  
 **Underfitting:** Occurs when the model is not able to obtain a sufficiently low error value on the training set.  
@@ -172,7 +175,7 @@ You can see the relationship between capacity and error in figure 3. Training an
 </p>
 
 
-#### 3. Hyperparameters and Validation sets  
+#### (3) Hyperparameters and Validation sets  
 
 **Hyperparameters:** Settings that we can use to control the algorithm's behavior.  
 (=Learning rate, Loss function, Epoch, ...)  
@@ -183,7 +186,7 @@ If hyperparameters are learned on the training set, such hyperparameters would a
 **validation set:** Part of train data (train/test) which is used to estimate the generalization error during or after training, allowing for the hyperparameters to be updated accordingly. (Used to estimate the generalization error during training)  
 
 
-#### 4. Stochastic Gradient Descent  
+#### (4) Stochastic Gradient Descent  
 
 A recurring problem in machine learning is that large training sets are necessary for good generalization, but large training sets are also more computationally expensive.  
 The cost function used by a machine learning algorithm often decomposes as a sum over training examples of some per-example loss function. As the training set size grows to billions of examples, the time to take a single gradient step becomes prohibitively long (in the case of gradient descent).  
