@@ -3,7 +3,8 @@ title:  "Deep Learning survey_1.Introduction"
 search: true
 categories:
   - Deep learning
-summary: This post is the first part (introduction section) of summary of a survey paper.
+excerpt: This post is the first part (introduction section) of summary of a survey paper.
+date: February 14, 2021
 toc: true
 toc_sticky: true
 header:
